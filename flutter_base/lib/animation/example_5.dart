@@ -6,9 +6,9 @@ void main() => runApp(const LogoApp());
 
 class AnimatedLogo extends AnimatedWidget {
   const AnimatedLogo({
-    super.key,
+    Key? key,
     required Animation<double> animation,
-  }) : super(listenable: animation);
+  }) : super(key: key, listenable: animation);
 
   static final _opacityTween = Tween<double>(begin: 0.1, end: 1);
   static final _sizeTween = Tween<double>(begin: 0, end: 300);
@@ -31,7 +31,7 @@ class AnimatedLogo extends AnimatedWidget {
 }
 
 class LogoApp extends StatefulWidget {
-  const LogoApp({super.key});
+  const LogoApp({Key? key}) : super(key: key);
 
   @override
   _LogoAppState createState() => _LogoAppState();

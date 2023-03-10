@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 void main() => runApp(const LogoApp());
 
 class LogoApp extends StatefulWidget {
-  const LogoApp({super.key});
+  const LogoApp({Key? key}) : super(key: key);
+
 
   @override
   _LogoAppState createState() => _LogoAppState();

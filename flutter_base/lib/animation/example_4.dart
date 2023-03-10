@@ -5,7 +5,8 @@ void main() => runApp(
     );
 
 class LogoWidget extends StatelessWidget {
-  const LogoWidget({super.key});
+  const LogoWidget({Key? key}) : super(key: key);
+
 
   @override
   Widget build(BuildContext context) {
@@ -20,8 +21,8 @@ class GrowTransition extends StatelessWidget {
   const GrowTransition({
     required this.child,
     required this.animation,
-    super.key,
-  });
+    Key? key,
+  }):super(key: key);
 
   final Widget child;
   final Animation<double> animation;
@@ -45,7 +46,8 @@ class GrowTransition extends StatelessWidget {
 }
 
 class LogoApp extends StatefulWidget {
-  const LogoApp({super.key});
+  const LogoApp({Key? key}) : super(key: key);
+
 
   @override
   _LogoAppState createState() => _LogoAppState();
